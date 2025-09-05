@@ -1,8 +1,8 @@
 :root{
   --bg:#ffffff; 
   --text:#111111; 
-  --link:#0645ad; 
-  --link-visited:#0b3d91;
+  --link:#597ab2; 
+  --link-visited:#bbc4d4;
   --focus:#ff9900; 
   --border:#e5e7eb;
   --btn-bg:#333333;       /* color de fondo botón */
@@ -15,10 +15,12 @@ html{scroll-behavior:smooth;}
 body{
   margin:0; 
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,sans-serif; 
-  background:var(--bg); 
+  background: linear-gradient(to bottom, #e0f7fa, #807d7d); /* celeste claro → gris claro */
   color:var(--text); 
   line-height:1.6;
+  min-height:100vh; /* que cubra toda la pantalla */
 }
+
 a{color:var(--link);}
 a:visited{color:var(--link-visited);}
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible{
@@ -40,6 +42,28 @@ header, nav, main, footer{
   margin-inline:auto; 
   padding:1rem;
 }
+header {
+  position: relative;
+  background-image: url("img/fondo-header.jpg"); /* ruta de tu imagen */
+  background-size: cover;    /* que cubra todo */
+  background-position: center; /* centrada */
+  background-repeat: no-repeat; /* que no se repita */
+  color: #fff; /* texto blanco para contraste */
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* capa oscura para mejorar contraste */
+  z-index: 0;
+}
+
+header * {
+  position: relative;
+  z-index: 1; /* asegura que el contenido esté por encima del overlay */
+}
+
 .hero{
   display:flex; 
   gap:1rem; 
