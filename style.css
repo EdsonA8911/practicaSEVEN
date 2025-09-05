@@ -81,20 +81,6 @@ nav ul{
   flex-wrap:wrap;
 }
 section{margin-block:1.5rem;}
-.field{margin-block: .75rem;}
-label{
-  display:block; 
-  font-weight:600; 
-  margin-bottom:.25rem;
-}
-input, textarea, select{
-  width:100%; 
-  max-width:32rem; 
-  padding:.6rem .7rem; 
-  border:1px solid var(--border); 
-  border-radius:.5rem; 
-  font:inherit;
-}
 
 /* 🔘 Botón accesible y oscuro */
 button{
