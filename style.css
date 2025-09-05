@@ -1,105 +1,129 @@
-/* =========================
-   Estilos generales
-========================= */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f6f9;
-    color: #333;
-    line-height: 1.6;
+:root{
+  --bg:#ffffff; 
+  --text:#111111; 
+  --link:#597ab2; 
+  --link-visited:#bbc4d4;
+  --focus:#ff9900; 
+  --border:#e5e7eb;
+  --btn-bg:#333333;       /* color de fondo botón */
+  --btn-bg-hover:#555555; /* hover */
+  --btn-bg-active:#111111;/* clic */
+  --btn-text:#ffffff;     /* texto del botón */
 }
 
-h1, h2, h3 {
-    color: #1a237e;
-    margin-bottom: 0.5em;
+html{scroll-behavior:smooth;}
+body{
+  margin:0; 
+  font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,sans-serif; 
+  background: linear-gradient(to bottom, #e0f7fa, #807d7d); /* celeste claro → gris claro */
+  color:var(--text); 
+  line-height:1.6;
+  min-height:100vh; /* que cubra toda la pantalla */
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+a{color:var(--link);}
+a:visited{color:var(--link-visited);}
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible{
+  outline:3px solid var(--focus); 
+  outline-offset:2px;
 }
-
-/* =========================
-   Encabezado
-========================= */
+.skip-link{
+  position:absolute; 
+  left:1rem; 
+  top:-40px; 
+  background:#000; 
+  color:#fff; 
+  padding:.5rem .75rem; 
+  z-index:1000;
+}
+.skip-link:focus{ top:1rem; }
+header, nav, main, footer{
+  max-width:68rem; 
+  margin-inline:auto; 
+  padding:1rem;
+}
 header {
-    display: flex;
-    align-items: center;
-    background-color: #1a237e;
-    color: #fff;
-    padding: 2em;
-    border-bottom: 4px solid #0d47a1;
+  position: relative;
+  background-image: url("img/fondo-header.jpg"); /* ruta de tu imagen */
+  background-size: cover;    /* que cubra todo */
+  background-position: center; /* centrada */
+  background-repeat: no-repeat; /* que no se repita */
+  color: #fff; /* texto blanco para contraste */
 }
 
-header .foto-perfil img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    border: 3px solid #fff;
-    margin-right: 1.5em;
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5); /* capa oscura para mejorar contraste */
+  z-index: 0;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2em;
+header * {
+  position: relative;
+  z-index: 1; /* asegura que el contenido esté por encima del overlay */
 }
 
-header .subtitulo {
-    font-size: 1.1em;
-    margin-top: 0.3em;
-    font-style: italic;
-    color: #c5cae9;
+.hero{
+  display:flex; 
+  gap:1rem; 
+  align-items:center; 
+  border-bottom:1px solid var(--border); 
+  padding-bottom:1rem;
+}
+.hero img{border-radius:50%;}
+nav ul{
+  display:flex; 
+  gap:1rem; 
+  list-style:none; 
+  padding:0; 
+  margin:0; 
+  flex-wrap:wrap;
+}
+section{margin-block:1.5rem;}
+.field{margin-block: .75rem;}
+label{
+  display:block; 
+  font-weight:600; 
+  margin-bottom:.25rem;
+}
+input, textarea, select{
+  width:100%; 
+  max-width:32rem; 
+  padding:.6rem .7rem; 
+  border:1px solid var(--border); 
+  border-radius:.5rem; 
+  font:inherit;
 }
 
-/* =========================
-   Secciones principales
-========================= */
-main {
-    max-width: 900px;
-    margin: 2em auto;
-    padding: 0 1em;
+/* 🔘 Botón accesible y oscuro */
+button{
+  padding:.6rem 1rem; 
+  border:0; 
+  border-radius:.75rem; 
+  cursor:pointer;
+  background-color:var(--btn-bg); 
+  color:var(--btn-text);
+  font:inherit;
+  transition: background-color .3s ease, transform .2s ease;
+}
+button:hover{
+  background-color:var(--btn-bg-hover);
+  transform:translateY(-2px);
+}
+button:active{
+  background-color:var(--btn-bg-active);
+  transform:translateY(0);
 }
 
-section {
-    margin-bottom: 2em;
-    background: #fff;
-    padding: 1.5em;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.lista-habilidades li {
-    background: #e8eaf6;
-    display: inline-block;
-    margin: 0.3em;
-    padding: 0.5em 1em;
-    border-radius: 20px;
-    font-size: 0.95em;
-    color: #1a237e;
-}
-
-article h3 {
-    margin-top: 0;
-    color: #0d47a1;
-}
-
-/* =========================
-   Pie de página
-========================= */
-footer {
-    background: #1a237e;
-    color: #fff;
-    text-align: center;
-    padding: 1.2em;
-    margin-top: 2em;
-}
-
-footer a {
-    color: #bbdefb;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
+.visually-hidden{
+  position:absolute; 
+  width:1px; 
+  height:1px; 
+  padding:0; 
+  margin:-1px; 
+  overflow:hidden; 
+  clip:rect(0 0 0 0); 
+  white-space:nowrap; 
+  border:0;
 }

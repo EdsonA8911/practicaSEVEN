@@ -1,53 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currículum de Edson</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edson Azurduy | Currículum y Portafolio</title>
+  <meta name="description" content="Portafolio y currículum de Edson Azurduy, diseñador de redes y estudiante. Experiencia, formación, habilidades y proyectos. Contacto y enlaces a redes.">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Edson Azurduy",
+    "jobTitle": "Diseñador de redes",
+    "description": "Diseñador de redes y estudiante de ingeniería. Experiencia en proyectos de construcción, radiofrecuencias y certificación de redes.",
+    "image": "img/perfil.png",
+    "email": "mailto:edson.azurduy@uab.com.bo",
+    "telephone": "+59168685120",
+    "url": "https://github.com/EdsonA8911/practicaSEVEN.git"
+  }
+  </script>
 </head>
 <body>
-    <header>
-        <img src="img/perfil.png" alt="Foto de perfil">
+  <!-- Skip link -->
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header>
+    <div class="hero">
+      <img src="img/perfil.png"
+           alt="Foto de perfil de Edson Azurduy"
+           width="144" height="144"
+           loading="lazy" decoding="async">
+      <div>
         <h1>Edson Azurduy</h1>
         <p>Diseñador de Redes | Estudiante | Apasionado por la tecnología</p>
-    </header>
+      </div>
+    </div>
 
-    <section id="sobre-mi">
-        <h2>Sobre mí</h2>
-        <p>Soy un estudiante apasionado por el desarrollo web y el software. Me gusta aprender nuevas tecnologías y aplicarlas en proyectos reales.</p>
-        <p>Dentro mis especialidades me dedico actualmente a diseño e implementacion de redes dentro de proyectos de construccion.</p>  
+    <nav aria-label="Secciones del sitio">
+      <ul>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#formacion">Formación</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#experiencia">Experiencia y proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <section id="sobre-mi" aria-labelledby="sobre-mi-titulo">
+      <h2 id="sobre-mi-titulo">Sobre mí</h2>
+      <p>Soy un estudiante apasionado por el desarrollo web y el software. Me gusta aprender nuevas tecnologías y aplicarlas en proyectos reales.</p>
+      <p>Actualmente me dedico al diseño e implementación de redes dentro de proyectos de construcción.</p>
     </section>
 
-    <section id="formacion">
-        <h2>Formación Académica</h2>
-        <ul>
-            <li>4to Año de Ingenieria en Redes y Telecomunicaciones - UPDS</li>
-            <li>4to Año de Ingenieria en Sistemas Informaticos Informaticos - UAB</li>
-            <li>Tecnico Superior en Sistemas Informaticos - INCOS</li>
-            <li>Bachillerato en Ciencias - Colegio Particular Cristo Rey (2008)</li>
-        </ul>
+    <section id="formacion" aria-labelledby="formacion-titulo">
+      <h2 id="formacion-titulo">Formación académica</h2>
+      <ul>
+        <li>4.º año de Ingeniería en Redes y Telecomunicaciones — UPDS</li>
+        <li>4.º año de Ingeniería en Sistemas Informáticos — UAB</li>
+        <li>Técnico Superior en Sistemas Informáticos — INCOS</li>
+        <li>Bachillerato en Ciencias — Colegio Particular Cristo Rey (2008)</li>
+      </ul>
     </section>
 
-    <section id="habilidades">
-        <h2>Habilidades</h2>
-        <ul>
-            <li>CISCO</li>
-            <li>AUTOCAD</li>
-            <li>CERTIFICACION DE RED</li>
-            <li>RADIOFRECUENCIAS</li>
-            <li>Trabajo en equipo bajo presion</li>
-        </ul>
+    <section id="habilidades" aria-labelledby="habilidades-titulo">
+      <h2 id="habilidades-titulo">Habilidades</h2>
+      <ul>
+        <li>Cisco</li>
+        <li>AutoCAD</li>
+        <li>Certificación de redes</li>
+        <li>Radiofrecuencias</li>
+        <li>Trabajo en equipo bajo presión</li>
+      </ul>
     </section>
 
-    <section id="experiencia">
-        <h2>Experiencia / Proyectos</h2>
-        <p>Participación en multiples obras y proyectos a nivel nacional.</p>
+    <section id="experiencia" aria-labelledby="experiencia-titulo">
+      <h2 id="experiencia-titulo">Experiencia y proyectos</h2>
+      <article aria-labelledby="exp-general">
+        <h3 id="exp-general">Participación en proyectos a nivel nacional</h3>
+        <p>Participación en múltiples obras y proyectos de redes de datos y telecomunicaciones.</p>
+      </article>
     </section>
 
-    <footer>
-        <p>Contacto: edson.azurduy@uab.com.bo</p>
-        <p>Telefono: 68685120</p>
-    </footer>
+    <aside aria-label="Información adicional">
+      <h2 class="visually-hidden">Información adicional</h2>
+      <p><a href="docs/cv-edson-azurduy.pdf">Descargar CV en PDF</a></p>
+    </aside>
+
+    <section id="contacto" aria-labelledby="contacto-titulo">
+      <h2 id="contacto-titulo">Contacto</h2>
+      <form action="#" method="post">
+        <div class="field">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+        </div>
+        <div class="field">
+          <label for="correo">Correo electrónico</label>
+          <input id="correo" name="correo" type="email" autocomplete="email" required>
+        </div>
+        <div class="field">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+        </div>
+        <button type="submit">Enviar</button>
+      </form>
+      <p>También puedes escribir a <a href="mailto:edson.azurduy@uab.com.bo">edson.azurduy@uab.com.bo</a> o llamar al <a href="tel:+59168685120">+591 68685120</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <h2 class="visually-hidden">Pie de página</h2>
+    <address>
+      <p>Correo: <a href="mailto:edson.azurduy@uab.com.bo">edson.azurduy@uab.com.bo</a></p>
+      <p>Teléfono: <a href="tel:+59168685120">+591 68685120</a></p>
+    </address>
+  </footer>
 </body>
 </html>
