@@ -176,4 +176,44 @@ section{margin-block:1.5rem;}
   border:0;
 }
 
+/* =========================
+   Footer estilizado
+========================= */
+#footer-section {
+  position: relative;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+#footer-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 200px;
+  width: 73%;
+  
+  height: 6px; /* franja superior */
+  background: linear-gradient(90deg, #1a237e, #64b5f6, #1a237e);
+  background-size: 200% 100%;
+  animation: wave 3s infinite linear;
+}
+
+#footer-section footer {
+  background: #1a237e;
+  color: #fff;
+  text-align: center;
+  padding: 2rem 1rem 1.5rem;
+  border-top: 1px solid #0d47a1;
+}
+
+#footer-section footer a {
+  color: #bbdefb;
+  text-decoration: none;
+  transition: color .3s ease;
+}
+
+#footer-section footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
 
