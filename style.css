@@ -82,25 +82,39 @@ nav ul{
 }
 section{margin-block:1.5rem;}
 
-/* 🔘 Botón accesible y oscuro */
-button{
-  padding:.6rem 1rem; 
-  border:0; 
-  border-radius:.75rem; 
-  cursor:pointer;
-  background-color:var(--btn-bg); 
-  color:var(--btn-text);
-  font:inherit;
-  transition: background-color .3s ease, transform .2s ease;
+.habilidades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+  text-align: center;
 }
-button:hover{
-  background-color:var(--btn-bg-hover);
-  transform:translateY(-2px);
+
+.habilidades-grid li {
+  background: #ffffffaa;
+  padding: 1rem;
+  border-radius: .75rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
 }
-button:active{
-  background-color:var(--btn-bg-active);
-  transform:translateY(0);
+
+.habilidades-grid li:hover {
+  transform: translateY(-5px);
 }
+
+.habilidades-grid img {
+  max-width: 64px;
+  margin-bottom: .5rem;
+}
+
+.habilidades-grid p {
+  margin: 0;
+  font-weight: 600;
+  color: #1a237e;
+}
+
 
 .visually-hidden{
   position:absolute; 
