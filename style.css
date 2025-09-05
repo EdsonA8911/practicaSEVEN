@@ -15,7 +15,7 @@ html{scroll-behavior:smooth;}
 body{
   margin:0; 
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,Arial,sans-serif; 
-  background: linear-gradient(to bottom, #e0f7fa, #807d7d); /* celeste claro → gris claro */
+  background: linear-gradient(to bottom, #b6adad, #e0f7fa); /* celeste claro → gris claro */
   color:var(--text); 
   line-height:1.6;
   min-height:100vh; /* que cubra toda la pantalla */
@@ -176,9 +176,34 @@ section{margin-block:1.5rem;}
   border:0;
 }
 
+#formacion ul {
+    list-style: none; /* quitamos el estilo por defecto */
+    padding-left: 0;
+}
+
+#formacion ul li {
+    position: relative;
+    padding-left: 25px; /* espacio para el círculo */
+    margin-bottom: 10px;
+}
+
+#formacion ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 10px;
+    height: 10px;
+    background-color: #1a237e; /* azul oscuro */
+    border-radius: 50%; /* lo convierte en círculo */
+}
+
+
 /* =========================
    Footer estilizado
 ========================= */
+
+
 #footer-section {
   position: relative;
   overflow: hidden;
@@ -189,9 +214,8 @@ section{margin-block:1.5rem;}
   content: "";
   position: absolute;
   top: 0;
-  left: 200px;
-  width: 73%;
-  
+  left: 0;
+  width: 100%;
   height: 6px; /* franja superior */
   background: linear-gradient(90deg, #1a237e, #64b5f6, #1a237e);
   background-size: 200% 100%;
@@ -199,7 +223,7 @@ section{margin-block:1.5rem;}
 }
 
 #footer-section footer {
-  background: #1a237e;
+  background: #464d89;
   color: #fff;
   text-align: center;
   padding: 2rem 1rem 1.5rem;
